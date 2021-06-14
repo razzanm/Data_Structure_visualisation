@@ -1,0 +1,78 @@
+
+body {
+    background-color: green;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#mainnav{
+   width: 100%;
+   height: 30px;
+   background-color:rgba(40.0,0,0.1);
+   overflow: hidden;
+   padding-top:10px;
+   
+}
+
+
+#mainnav a{
+    text-decoration: none;
+    color: white;
+    height:100%;
+    border: 3px solid rgba(15,0,0,0.5);
+    margin-left: 1%;
+    font-size: 100%;
+    padding:1%;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgba(0,0,0,1);
+
+}
+
+#mainnav a:hover {
+    background-color:rgb(126, 6, 6);
+}
+
+#title{
+    font-size: x-large;
+    font-weight:bold;
+    color: rgb(233, 10, 2);
+    background-color:rgb(2, 240, 61);
+    width: 100%;
+    height:70px;
+    margin-top: 0;
+    text-align: center;
+    padding-top: 30px;
+    overflow: hidden;
+
+}
+
+#datastructures{
+    height: 100%;
+   width: 15%;
+   overflow: hidden auto;
+   float: left;
+}
+
+#maindiv {
+    background-color:green;
+    height:100%;
+    width: 85%;
+    overflow: hidden auto;
+    float: left;
+    padding: 20px;
+}
+
+.dsbtn {
+    width:inherit;
+    height:40px;
+    border: 1px solid blueviolet;
+}
+
+.dsbtndiv{
+    width:100%;
+    height:40px;
+}

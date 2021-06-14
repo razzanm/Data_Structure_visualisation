@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <header id="title">Data Structures Visualization</header>
+    <nav id = "mainnav">
+    <a  href="#">sidebar</a> 
+    <a  href="#">Home</a>  
+    <a  href="#">Datastructures</a> 
+     <a  href="#">Share</a> 
+     <a  href="#">Contact us</a>  
+     <a  href="#">Log in</a>     
+    </nav>
+    <div style="overflow: hidden auto">
+    <div id="datastructures">
+        <div class = "dsbtndiv"><Button id="arrayviewbtn" class = "dsbtn"> Array</Button></div>
+        <div class = "dsbtndiv"><Button id="stackviewbtn" class = "dsbtn">Stack</Button></div>
+        <div class = "dsbtndiv"><Button id="queueviewbtn" class = "dsbtn">Queue</Button></div>
+        <div class = "dsbtndiv"><Button id="linkedviewbtn" class = "dsbtn">Linked List</Button></div>
+
+    </div>
+    <div id="maindiv">
+        <div id = "array" style="overflow-y: auto;overflow-x: hidden;">
+            <svg width="600" height="400" id = "arraysvg"></svg>
+            <div>
+              <button id="createarray" style="background-color: greenyellow; font-weight: bold;font-size: 20px">Create Array</button>
+            </div>
+            <div id="arrayspace" style="display: none; margin-top: 40px; overflow-y : auto; overflow-x: hidden">
+              <div style="float: left;">
+                <p id="warning" style="display: none;">hello</p>
+                <form id = 'arrayform'>
+                  <label for="data">Data</label><br/>
+                  <input type="text" id="data" name="data"><br/>
+                  <label for="index">Index</label><br/>
+                  <input type="text" id="index" name="index"><br/>
+                </form>
+                <button id="Enterdata" type = "button" style="background-color:skyblue; font-weight: bold; font-size:20px">Enter</button>
+              </div>
+              <div style = "float : left; margin-left: 50px;">
+                <input type="text" id="getindex" name="getindex">
+                <button id="btngetdata" type = "button" style="background-color:yellow; font-weight: bold; font-size: 20px">Get data</button><br/>
+                <p id = 'resultfetch' style = "display : none;"></p><br/>
+                
+              </div>
+            </div>
+            </div>
+            <div id = "stack" style = "overflow-y : auto; overflow-x: hidden;">
+            <svg width="500" height="400" id="stacksvg"></svg>
+            <div style = "margin-top: 30px; margin-left: 30px;margin-bottom: 50px;">
+              <button id = 'pushbtn' style = "background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px">PUSH</button>
+              <button id = 'popbtn' style = "background-color: rgb(253, 38, 38); font-weight: bold; font-size:20px;margin-left: 50px;">POP</button>
+            </div>
+            
+            </div>
+        
+            <div id = "queue" style = "overflow-x: hidden; overflow-y: auto;">
+            <svg id="queuesvg" width="600" height="300"></svg>
+            <div style = "margin-top: 30px; margin-left: 30px;margin-bottom: 50px;">
+              <button id = 'inqueuebtn' style = "background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px">INQUEUE</button>
+              <button id = 'dequeuebtn' style = "background-color: rgb(253, 38, 38); font-weight: bold; font-size:20px;margin-left: 50px;">DEQUEUE</button>
+            </div>
+            </div>
+            
+            <div id = "Linked_list" style = "overflow-x: hidden; overflow-y: auto;">
+              <svg id  = 'linkedlistsvg' width = '1000' height = '400'></svg>
+             </div>
+    </div>
+    </div>
+    <script src="d3/d3.js"></script>
+    <script src="./mainscript.js"></script>
+    <script src="./arrayscript.js"></script>
+    <script src="./stackscript.js"></script>
+    <script src="./queuescript.js"></script>
+    <script src="./LinkedScript.js"></script>
+</body>
+</html>
