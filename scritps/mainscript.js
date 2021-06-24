@@ -2,10 +2,10 @@ const arraydiv = document.getElementById('array');
 const stackdiv = document.getElementById('stack');
 const queuediv = document.getElementById('queue');
 const linkeddiv = document.getElementById('Linked_list');
- var activediv = arraydiv;
+ var activediv = linkeddiv;
  stackdiv.style.display = 'none';
  queuediv.style.display = 'none';
- linkeddiv.style.display = 'none';
+ arraydiv.style.display = 'none';
  const arrayviewbtn = document.getElementById('arrayviewbtn');
  const stackviewbtn = document.getElementById('stackviewbtn');
  const queueviewbtn = document.getElementById('queueviewbtn');
@@ -34,5 +34,13 @@ function logs(){
     console.log('its working');
 }
 
+function treeNodes(){
+   let data;
+   let left;
+   let right;
+}
+const tempnode = new treeNodes();
+tempnode.data = 54;
+console.log(tempnode);
 //console.log('its working');
 
