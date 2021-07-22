@@ -1,100 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <body>
-    <header id="title">Data Structures Visualization</header>
-    <nav id = "mainnav">
-    <a  href="#">sidebar</a> 
-    <a  href="#">Home</a>  
-    <a  href="#">Datastructures</a> 
-     <a  href="#">Share</a> 
-     <a  href="#">Contact us</a>  
-     <a  href="#">Log in</a>     
-    </nav>
-    <div style="overflow: hidden auto">
+  <header id="title">Data Structures Visualization</header>
+  <nav id="mainnav">
+    <a href="#">sidebar</a>
+    <a href="#">Home</a>
+    <a href="#">Datastructures</a>
+    <a href="#">Share</a>
+    <a href="#">Contact us</a>
+    <a href="#">Log in</a>
+  </nav>
+  <div style="overflow: hidden auto">
     <div id="datastructures">
-        <div class = "dsbtndiv"><Button id="arrayviewbtn" class = "dsbtn"> Array</Button></div>
-        <div class = "dsbtndiv"><Button id="stackviewbtn" class = "dsbtn">Stack</Button></div>
-        <div class = "dsbtndiv"><Button id="queueviewbtn" class = "dsbtn">Queue</Button></div>
-        <div class = "dsbtndiv"><Button id="linkedviewbtn" class = "dsbtn">Linked List</Button></div>
+      <div class="dsbtndiv"><Button id="arrayviewbtn" class="dsbtn"> Array</Button></div>
+      <div class="dsbtndiv"><Button id="stackviewbtn" class="dsbtn">Stack</Button></div>
+      <div class="dsbtndiv"><Button id="queueviewbtn" class="dsbtn">Queue</Button></div>
+      <div class="dsbtndiv"><Button id="linkedviewbtn" class="dsbtn">Linked List</Button></div>
+      <div class="dsbtndiv"><Button id="binaryTreeViewbtn" class="dsbtn">Binary Search Tree</Button></div>
 
     </div>
     <div id="maindiv">
-        <div id = "array" style="overflow-y: auto;overflow-x: hidden;">
-            <svg width="600" height="400" id = "arraysvg"></svg>
-            <div>
-              <button id="createarray" style="background-color: greenyellow; font-weight: bold;font-size: 20px">Create Array</button>
-            </div>
-            <div id="arrayspace" style="display: none; margin-top: 40px; overflow-y : auto; overflow-x: hidden">
-              <div style="float: left;">
-                <p id="warning" style="display: none;">hello</p>
-                <form id = 'arrayform'>
-                  <label for="data">Data</label><br/>
-                  <input type="text" id="data" name="data"><br/>
-                  <label for="index">Index</label><br/>
-                  <input type="text" id="index" name="index"><br/>
-                </form>
-                <button id="Enterdata" type = "button" style="background-color:skyblue; font-weight: bold; font-size:20px">Enter</button>
-              </div>
-              <div style = "float : left; margin-left: 50px;">
-                <input type="text" id="getindex" name="getindex">
-                <button id="btngetdata" type = "button" style="background-color:yellow; font-weight: bold; font-size: 20px">Get data</button><br/>
-                <p id = 'resultfetch' style = "display : none;"></p><br/>
-                
-              </div>
-            </div>
-            </div>
-            <div id = "stack" style = "overflow-y : auto; overflow-x: hidden;">
-            <svg width="500" height="400" id="stacksvg"></svg>
-            <div style = "margin-top: 30px; margin-left: 30px;margin-bottom: 50px;">
-              <button id = 'pushbtn' style = "background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px">PUSH</button>
-              <button id = 'popbtn' style = "background-color: rgb(253, 38, 38); font-weight: bold; font-size:20px;margin-left: 50px;">POP</button>
-            </div>
-            
-            </div>
-        
-            <div id = "queue" style = "overflow-x: hidden; overflow-y: auto;">
-            <svg id="queuesvg" width="600" height="300"></svg>
-            <div style = "margin-top: 30px; margin-left: 30px;margin-bottom: 50px;">
-              <button id = 'inqueuebtn' style = "background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px">INQUEUE</button>
-              <button id = 'dequeuebtn' style = "background-color: rgb(253, 38, 38); font-weight: bold; font-size:20px;margin-left: 50px;">DEQUEUE</button>
-            </div>
-            </div>
-            
-            <div id = "Linked_list" style = "overflow-x: hidden; overflow-y: auto;">
-              <svg id  = 'linkedlistsvg' width = '1200' height = '400'>
-              </svg>
-              <div style = "margin-top:30px">
-                <Button id="rootbtn" style = "background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px;">Create rootNode</Button>
-                <Button id="insertfrontbtn" style = "background-color: rgb(7, 224, 253); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px; display: none">Insert Node At Front</Button>
-                <Button id="insertEndbtn" style = "background-color: rgb(253, 72, 38); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px;margin-left: 50px; display: none">Insert Node At End</Button>
+      <div id="array" style="overflow-y: auto;overflow-x: hidden;">
+        <div class="text">
+          <h1>Introduction</h1>
+          <p class="needborder">
+            An array is a collection of items stored at contiguous memory locations.
+            The idea is to store multiple items of the same type together. This makes
+            it easier to calculate the position of each element by simply adding an
+            offset to a base value, i.e., the memory location of the first element of
+            the array (generally denoted by the name of the array). The base value is
+            index 0 and the difference between the two indexes is the offset.<br />For
+            simplicity, we can think of an array as a fleet of stairs where on each
+            step is placed a value (let’s say one of your friends). Here, you can
+            identify the location of any of your friends by simply knowing the count
+            of the step they are on.&nbsp;<br />Remember: “Location of next index
+            depends on the data type we use”.&nbsp;
+          </p>
+          <p>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/array-2.png" alt="array" />
+          </p>
+          <p>
+          <h3> Note For Animation:</h3><br>
+          1.The Size of array is 10.<br>
+          2.100 is the garbage value (let).<br>
+          3.Start animation by clicking create Array.<br>
+          </p>
+        </div>
+        <svg width="600" height="400" id="arraysvg"></svg>
+        <div>
+          <button id="createarray" style="background-color: greenyellow; font-weight: bold;font-size: 20px">Create
+            Array</button>
+        </div>
+        <div id="arrayspace" style="display: none; margin-top: 40px; overflow-y : auto; overflow-x: hidden">
+          <div style="float: left;">
+            <p id="warning" style="display: none;">hello</p>
+            <form id='arrayform'>
+              <label for="data">Data</label><br />
+              <input type="text" id="data" name="data"><br />
+              <label for="index">Index</label><br />
+              <input type="text" id="index" name="index"><br />
+            </form>
+            <button id="Enterdata" type="button"
+              style="background-color:skyblue; font-weight: bold; font-size:20px">Enter</button>
+          </div>
+          <div style="float : left; margin-left: 50px;">
+            <input type="text" id="getindex" name="getindex">
+            <button id="btngetdata" type="button"
+              style="background-color:yellow; font-weight: bold; font-size: 20px">Get data</button><br />
+            <p id='resultfetch' style="display : none;"></p><br />
 
-              </div>
-             </div>
-             <div id = "BinarySearchTree" style = "overflow: hidden auto">
-              <svg id = "binarysearchtreesvg" width="600" height="800">
-                <rect width = '100' height = '100'  style="color:rgb(240, 248, 255)">hellkkkkjkjjkjkjk
-                  nnjnjn
-                  njnjnjn
-                  jnjjn
-                  jnjnjno guys</rect>
+          </div>
+        </div>
+      </div>
+      <div id="stack" style="overflow-y : auto; overflow-x: hidden;">
+        <div class="text">
+          <h1>Introduction</h1>
+          <p class="needborder">
+            In computer science, a stack is an abstract data type that serves as a collection of elements, with two main
+            principal operations:
 
-              </svg>
-            </div>
+            Push, which adds an element to the collection, and
+            Pop, which removes the most recently added element that was not yet removed.
+            The order in which elements come off a stack gives rise to its alternative name, LIFO (last in, first out).
+            Additionally, a peek operation may give access to the top without modifying the stack.[1] The name "stack"
+            for this type of structure comes from the analogy to a set of physical items stacked on top of each other.
+            This structure makes it easy to take an item off the top of the stack, while getting to an item deeper in
+            the stack may require taking off multiple other items first.
+          </p>
+          <p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lifo_stack.png/350px-Lifo_stack.png">
+          </p>
+          <p>
+          <h3> Note For Animation:</h3><br>
+          1.The Size of Stack is 9.<br>
+          2.color blocks represent the data.<br>
+          </p>
+        </div>
+        <svg width="500" height="400" id="stacksvg"></svg>
+        <div style="margin-top: 30px; margin-left: 30px;margin-bottom: 50px;">
+          <button id='pushbtn'
+            style="background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px">PUSH</button>
+          <button id='popbtn'
+            style="background-color: rgb(253, 38, 38); font-weight: bold; font-size:20px;margin-left: 50px;">POP</button>
+        </div>
+
+      </div>
+
+      <div id="queue" style="overflow-x: hidden; overflow-y: auto;">
+
+        <div class="text">
+          <h1>Introduction</h1>
+          <p class="needborder">
+            A Queue is a linear structure which follows a particular order in which the operations are performed. <br>
+            The order is First In First Out (FIFO). <br>
+            A good example of a queue is any queue of consumers for a resource where the consumer that came first is
+            served first. <br>
+            The difference between stacks and queues is in removing. In a stack we remove the item the most recently
+            added; <br>
+            in a queue, we remove the item the least recently added.<br>
+          </p>
+          <p>
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/02/Queue.png">
+          </p>
+          <p>
+          <h3> Note For Animation:</h3><br>
+          1.The Size of Queue is 10.<br>
+          2.color blocks represent the data.<br>
+          </p>
+        </div>
+        <svg id="queuesvg" width="600" height="300"></svg>
+        <div style="margin-top: 30px; margin-left: 30px;margin-bottom: 50px;">
+          <button id='inqueuebtn'
+            style="background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px">INQUEUE</button>
+          <button id='dequeuebtn'
+            style="background-color: rgb(253, 38, 38); font-weight: bold; font-size:20px;margin-left: 50px;">DEQUEUE</button>
+        </div>
+      </div>
+
+      <div id="Linked_list" style="overflow-x: hidden; overflow-y: auto;">
+
+        <div class="text">
+          <h1>Introduction</h1>
+          <p class="needborder">
+            n computer science, a linked list is a linear collection of data elements whose order is not given by their
+            physical placement in memory.
+            Instead, each element points to the next.
+            It is a data structure consisting of a collection of nodes which together represent a sequence. <br>
+            In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node
+            in the sequence. <br>
+            This structure allows for efficient insertion or removal of elements from any position in the sequence
+            during iteration. <br>
+            More complex variants add additional links, allowing more efficient insertion or removal of nodes at
+            arbitrary positions.<br>
+            A drawback of linked lists is that access time is linear (and difficult to pipeline). <br>
+            Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked
+            lists.<br>
+          </p>
+          <p>
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png">
+          </p>
+          <p>
+          <h3> Note For Animation:</h3><br>
+          1.Rectangle represent a node.<br>
+          2.Arrow shows link to next node.<br>
+          </p>
+        </div>
+        <svg id='linkedlistsvg' width='1200' height='400'>
+        </svg>
+        <div style="margin-top:30px">
+          <Button id="rootbtn"
+            style="background-color: rgb(5, 192, 114); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px;">Create
+            rootNode</Button>
+          <Button id="insertfrontbtn"
+            style="background-color: rgb(7, 224, 253); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px; display: none">Insert
+            Node At Front</Button>
+          <Button id="insertEndbtn"
+            style="background-color: rgb(253, 72, 38); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px;margin-left: 50px; display: none">Insert
+            Node At End</Button>
+
+        </div>
+      </div>
+      <div id="BinarySearchTree" style="overflow: hidden auto">
+        <div class="text">
+          <h1>Introduction</h1>
+          <p class="needborder">
+            A binary search tree is a rooted binary tree, whose internal nodes each store a key (and optionally, an
+            associated value), and each has two distinguished sub-trees, commonly denoted left and right.<br>
+            The tree additionally satisfies the binary search property:<br>
+            the key in each node is greater than or equal to any key stored in the left sub-tree, and less than or equal
+            to any key stored in the right sub-tree.<br>
+            The leaves (final nodes) of the tree contain no key and have no structure to distinguish them from one
+            another.<br>
+            Often, the information represented by each node is a record rather than a single data element.<br>
+            However, for sequencing purposes, nodes are compared according to their keys rather than any part of their
+            associated records.<br>
+            The major advantage of binary search trees over other data structures is that the related sorting algorithms
+            and search algorithms such as in-order traversal can be very efficient.<br>
+          </p>
+          <p>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png">
+          </p>
+          <p>
+          <h3> Note For Animation:</h3><br>
+          1.Rectangle represent a node.<br>
+          2.Arrow shows link to next node.<br>
+          </p>
+        </div>
+
+        <svg id="binarysearchtreesvg" width="700" height="450"></svg>
+        <div>
+          <label>Enter the data</label><br>
+          <input type="text" id="treedatainput" name="treedatainput">
+          <Button id="insertintree"
+            style="background-color: rgb(253, 72, 38); font-weight: bold; font-size:20px; border: 3px solid yellow; border-radius: 5px;margin-left: 50px;">Insert
+            Node</Button>
+        </div>
+
+      </div>
     </div>
-    </div>
-    <script src="d3/d3.js"></script>
-    <script src="scritps/mainscript.js"></script>
-    <script src="scritps/arrayscript.js"></script>
-    <script src="scritps/stackscript.js"></script>
-    <script src="scritps/queuescript.js"></script>
-    <script src="scritps/LinkedScript.js"></script>
-    <script src="scritps/binarysearchtree.js"></script> 
+  </div>
+  <script src="d3/d3.js"></script>
+  <script src="scritps/mainscript.js"></script>
+  <script src="scritps/arrayscript.js"></script>
+  <script src="scritps/stackscript.js"></script>
+  <script src="scritps/queuescript.js"></script>
+  <script src="scritps/LinkedScript.js"></script>
+  <script src="scritps/binarysearchtree.js"></script>
 </body>
+
 </html>
